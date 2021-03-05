@@ -3,7 +3,7 @@ The script is without config, you have the option to edite everything in the cod
 The script is built by parts of any Advantage, you have the Advantage name at the start of every "Advantage event", every part is defined well.
 
 If you have any problems or suggestions for me here is my discord user: 𝓐𝓻𝓲𝓮𝓵𝓩#5022
-coded by me for first realse after lerning the basics and so more using with natives.
+coded by me for first release after lerning the basics and so more using with natives.
 
 For Weapons Advantage:
 [https://wiki.rage.mp/index.php?title=Weapons]
