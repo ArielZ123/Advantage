@@ -89,8 +89,8 @@ end)
 Citizen.CreateThread(function()
     while true do
        Citizen.Wait(0)
-		SetWeaponDamageModifier(GetHashKey("weapon_pistol"), 0.5)
-		SetWeaponDamageModifier(GetHashKey("WEAPON_NIGHTSTICK"), 0)
+	SetWeaponDamageModifier(GetHashKey("weapon_pistol"), 0.5)
+	SetWeaponDamageModifier(GetHashKey("WEAPON_NIGHTSTICK"), 0)
 	  --SetWeaponDamageModifier(GetHashKey("Weapon_Test"), 0 damage that the gun takes)
 	end	
 end)
@@ -111,11 +111,11 @@ Citizen.CreateThread(function()
 	 if GetEntityHealth(GetPlayerPed(-1)) <= 120 then
 	    RequestAnimSet("move_m@injured")
 	    SetPedMovementClipset(GetPlayerPed(-1), "move_m@injured", true)
-		SetPedMoveRateOverride(PlayerId(),0.1)
-        SetRunSprintMultiplierForPlayer(PlayerId(),0.1 )
+	    SetPedMoveRateOverride(PlayerId(),0.1)
+           SetRunSprintMultiplierForPlayer(PlayerId(),0.1 )
 	 else
 	 if GetEntityHealth(GetPlayerPed(-1)) > 121 then
-		ResetPedMovementClipset(GetPlayerPed(-1))
+	    ResetPedMovementClipset(GetPlayerPed(-1))
 	    ResetPedWeaponMovementClipset(GetPlayerPed(-1))
 	    ResetPedStrafeClipset(GetPlayerPed(-1))
 	 end
