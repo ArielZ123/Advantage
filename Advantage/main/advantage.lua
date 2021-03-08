@@ -27,10 +27,10 @@ Citizen.CreateThread(function()
     while (time ~= 0) do
         Citizen.Wait(5000)
         time = time - 1
-		SetWeaponDamageModifier(GetHashKey("weapon_unarmed"), 0.1)
-    end
+	SetWeaponDamageModifier(GetHashKey("weapon_unarmed"), 0.1)
+        end
 
-	if IsPedInMeleeCombat then
+     if IsPedInMeleeCombat then
        SetWeaponDamageModifier(GetHashKey("weapon_unarmed"), 1.4)
 	end
    end	
@@ -45,38 +45,38 @@ Citizen.CreateThread(function()
     while (time ~= 0) do
         Citizen.Wait(5000)
         time = time - 1
-    SetRunSprintMultiplierForPlayer(PlayerId(),1.8)
+        SetRunSprintMultiplierForPlayer(PlayerId(),1.8)
 	SetPedMoveRateOverride(PlayerId(),1.1)
-  end
+        end
+     end
  end
-end
 end)
 
 -- Police Movment Advantage 
 Citizen.CreateThread(function()
     while true do
-	  Citizen.Wait(0)
-	if PlayerData.job ~= nil and PlayerData.job.name == 'police' then
-     SetPedMoveRateOverride(PlayerId(),1.5)
-     SetRunSprintMultiplierForPlayer(PlayerId(),1.10)
-    end
+       Citizen.Wait(0)
+    if PlayerData.job ~= nil and PlayerData.job.name == 'police' then
+      SetPedMoveRateOverride(PlayerId(),1.5)
+      SetRunSprintMultiplierForPlayer(PlayerId(),1.10)
+      end
   end	
 end)
 
 -- swimming Advantage
 Citizen.CreateThread(function()
     while true do
-	  Citizen.Wait(0)
-	 if PlayerData.job~= nil and PlayerData.job.name == 'police' then
-	    SetSwimMultiplierForPlayer(PlayerId(), 1.49)
-     end
+       Citizen.Wait(0)
+    if PlayerData.job~= nil and PlayerData.job.name == 'police' then
+	SetSwimMultiplierForPlayer(PlayerId(), 1.49)
+    end
   end
 end)
 
 -- Stamina Advantage
 Citizen.CreateThread(function()
     while true do
-	  Citizen.Wait(0)
+       Citizen.Wait(0)
     if PlayerData.job~= nil and PlayerData.job.name== 'police' then
 	   GetPlayerSprintStaminaRemaining(PlayerId(), 1.10)
     else
@@ -88,7 +88,7 @@ end)
 -- Guns Advantage 
 Citizen.CreateThread(function()
     while true do
-	  Citizen.Wait(0)
+       Citizen.Wait(0)
 		SetWeaponDamageModifier(GetHashKey("weapon_pistol"), 0.5)
 		SetWeaponDamageModifier(GetHashKey("WEAPON_NIGHTSTICK"), 0)
 	  --SetWeaponDamageModifier(GetHashKey("Weapon_Test"), 0 damage that the gun takes)
@@ -97,17 +97,17 @@ end)
 
 Citizen.CreateThread(function()
     while true do
-	  Citizen.Wait(0)
-	if PlayerData.job ~= nil and PlayerData.job.name == 'police' then
-		SetWeaponDamageModifier(GetHashKey("weapon_pistol"), 1.2)
-	  --SetWeaponDamageModifier(GetHashKey("WEAPON_NIGHTSTICK"), 0 damage that the gun takes)
-	end
+       Citizen.Wait(0)
+    if PlayerData.job ~= nil and PlayerData.job.name == 'police' then
+	SetWeaponDamageModifier(GetHashKey("weapon_pistol"), 1.2)
+	 --SetWeaponDamageModifier(GetHashKey("WEAPON_NIGHTSTICK"), 0 damage that the gun takes)
+    end
   end	
 end)
 
 Citizen.CreateThread(function()
     while true do
-	  Citizen.Wait(0)
+       Citizen.Wait(0)
 	 if GetEntityHealth(GetPlayerPed(-1)) <= 120 then
 	    RequestAnimSet("move_m@injured")
 	    SetPedMovementClipset(GetPlayerPed(-1), "move_m@injured", true)
